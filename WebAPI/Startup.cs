@@ -29,7 +29,7 @@ namespace WebAPI
         {
             services.AddCors(options => options.AddPolicy(ApiCorsPolicy, builder =>
             {
-                builder.WithOrigins("http://localhost:8081", "http://www.example.com").AllowAnyOrigin()
+                builder.WithOrigins("http://groupb-project-vuejs-netcore-mssql.s3-website.eu-central-1.amazonaws.com", "http://www.example.com").AllowAnyOrigin()
                 .AllowAnyMethod()
                 .AllowAnyHeader();
                 //.AllowCredentials();

@@ -32,9 +32,9 @@ namespace Business.Concrete
             return new SuccesResult(Messages.CommentDeleted);
         }
 
-        public IDataResult<Comment> GetById(int articleId)
+        public IDataResult<List<Comment>> GetById(int articleId)
         {
-            return new SuccesDataResult<Comment>(_commentDal.Get(c => c.Id == articleId));
+            return new SuccesDataResult<List<Comment>> (_commentDal.GetList(c => c.ArticleId == articleId).ToList());
         }
 
         public IDataResult<List<Comment>> GetList()
